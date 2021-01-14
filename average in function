@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+float ave(int,int,int);
+void main()
+{
+ int m,c,d;
+ float a;
+ clrscr();
+ printf("\n Enter three sub mark=");
+ scanf("%d%d%d",&m,&c,&d);
+ a=ave(m,c,d);
+ printf("average =%f",a);
+ getch();
+}
+float ave(int s,int p,int q)
+{
+int r;
+float t;
+r=s+p+q;
+t=r/3;
+return t;
+}
