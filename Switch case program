@@ -1,2 +1,36 @@
-# C-Languages
-Program Practice in MCA 1sem
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a,b;
+char ch;
+clrscr();
+printf("\n 1.sum of two no");
+printf("\n 2.sub of two no");
+printf("\n 3.mul of two no");
+printf("\n 4.div of two no");
+printf("\n enter your choice=");
+scanf("\n %d",&ch);
+switch(ch)
+{
+case 1:
+printf("\n enter two no==");
+scanf("\n %d%d",&a,&b);
+printf("\n sum =%d",(a+b));break;
+case 2:
+printf("\n enter two no==");
+scanf("\n %d%d",&a,&b);
+printf("\n sub =%d",(a-b));break;
+case 3:
+printf("\n enter two no==");
+scanf("\n %d%d",&a,&b);
+printf("\n mul =%d",(a*b));break;
+case 4:
+printf("\n enter two no==");
+scanf("\n %d%d",&a,&b);
+printf("\n div =%d",(a/b));break;
+default:printf("\n wrong input try again");
+getch();
+}
+}
+
