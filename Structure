@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Student
+{
+    int id;
+    char name[20];
+    char subject[20];
+};
+
+int main()
+{
+    int count=-1;
+    while (1)
+    {
+        printf("***Student Record***\n");
+        printf("1. Add Student \n 2.list  All Student \n 3.Delete A Student \n 0. exit \n");
+        printf("Enter your choice:=");
+        int c;
+        scanf("%d", &c);
+        switch (c)
+        {
+            struct Student std[7];
+        case 1:
+           
+                printf("\n Enter Student id:=");
+                scanf("%d", &std[count+1].id);
+                printf("Enter Student Name:=");
+                scanf("%s", &std[count+1].name);
+                printf("Enter Subject of Student:=");
+                scanf("%s", &std[count+1].subject);
+                            count++;
+               printf("Record Added Successfully\n");
+            
+            break;
+
+        case 2:
+            printf("***Print details of Student***\n");
+            if(count<0)
+            printf("Record is Empty\n");
+            else{
+            for (int i = 0; i < count+1; i++)
+            {
+                printf("\n id:\t %d", std[i].id);
+                printf("\n Name:\t%s", std[i].name);
+                printf("\n Subject:\t %s", std[i].subject);
+            }
+            }
+            break;
+            case 3:
+            int id_no;
+            printf("\n Enter id what you want to delete:=");
+            scanf("%d",&id_no);
+            for(int i=0;i<count+1;i++){
+            if(std[i].id==id_no)
+            {
+                for(int j=i; j<count+1;j++){
+                    std[j]= std[j+1];
+                    // std[j].id = std[j+1].id;
+                    // std[j].name=std[j+1].name;
+                    // std[j].subject=std[j+1].subject
+                }
+                break;
+
+            }
+            }
+            break;
+        case 0:
+            printf("Exit Successfully");
+            return 0;
+            break;
+        default:
+            printf("Wrong choice try again!");
+            break;
+        }
+    }
+}
